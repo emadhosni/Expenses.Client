@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Transaction } from '../../models/transaction/transaction';
+import { TransactionService } from '../../services/transaction/tansaction';
 
 @Component({
   selector: 'app-transaction-list',
@@ -8,25 +9,18 @@ import { Transaction } from '../../models/transaction/transaction';
   templateUrl: './transaction-list.html',
   styleUrl: './transaction-list.css'
 })
-export class TransactionListComponent {
+export class TransactionListComponent implements OnInit {
+  transactions: Transaction[] = [];
 
-  transactions: Transaction[] = [
-    {
-      id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-      category: 'Food',
-      type: 'Expense',
-      amount: 50
-    },
-    {
-      id: 1,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-      category: 'Food',
-      type: 'Expense',
-      amount: 50
-    }
-  ];
+  constructor(private transactionService: TransactionService) {}
 
+  ngOnInit(): void {
+    this.loadTransactions();
+  }
+
+  loadTransactions(): void {
+    this.transactionService.
+    getAll().
+    subscribe((data: Transaction[]) => {this.transactions = data;});
+  }
 }
