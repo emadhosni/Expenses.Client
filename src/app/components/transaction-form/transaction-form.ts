@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-transaction-form',
   imports: [],
   templateUrl: './transaction-form.html',
-  styleUrl: './transaction-form.css',
+  styleUrl: './transaction-form.css'
 })
-export class TransactionForm {
+export class TransactionFormComponent {
 
 }
