@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './transaction-form.html',
   styleUrl: './transaction-form.css'
 })
-export class TransactionFormComponent {
+export class TransactionForm {
 
 }

@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './components/header/header';
-import { FooterComponent } from './components/footer/footer';
-import { TransactionListComponent } from './components/transaction-list/transaction-list';
+import { Header } from './components/header/header';
+import { Footer } from './components/footer/footer';
+import { TransactionList } from './components/transaction-list/transaction-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

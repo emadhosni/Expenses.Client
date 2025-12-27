@@ -1,29 +1,29 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './components/login/login';
-import { SignupComponent } from './components/signup/signup';
-import { TransactionListComponent } from './components/transaction-list/transaction-list';
-import { TransactionFormComponent } from './components/transaction-form/transaction-form';
+import { Login } from './components/login/login';
+import { Signup } from './components/signup/signup';
+import { TransactionList } from './components/transaction-list/transaction-list';
+import { TransactionForm } from './components/transaction-form/transaction-form';
  
 export const routes: Routes = [
     {
         path:'login',
-        component: LoginComponent
+        component: Login
     },
     {
         path:'signup',
-        component: SignupComponent
+        component: Signup
     },
     {
         path:'transactions',
-        component:TransactionListComponent
+        component:TransactionList
     },
     {
         path:'add',
-        component: TransactionFormComponent
+        component: TransactionForm
     },
     {
         path:'edit/:id',
-        component: TransactionFormComponent
+        component: TransactionForm
     },
     {
         path:'',
