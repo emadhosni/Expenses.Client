@@ -5,11 +5,11 @@ import { Footer } from './components/footer/footer';
 import { TransactionList } from './components/transaction-list/transaction-list';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+    selector: 'app-root',
+    imports: [RouterOutlet, Header, Footer],
+    templateUrl: './app.html',
+    styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('Expenses.Client');
+    protected readonly title = signal('Expenses.Client');
 }
